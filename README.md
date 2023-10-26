@@ -1,6 +1,4 @@
-# ![](./icon-128.png) Chrome-extension-text-formatting
-
-Format your text anytime in the web editor.
+# <img width="42" alt="logo" src="./icon-16.png"> Format your text anytime in the web editor.
 
 通过谷歌扩展，快速将选中文本，格式化为符合 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 的文本。
 
