@@ -1,0 +1,31 @@
+{
+  "name": "Text Formatting",
+  "version": "1.0.0",
+  "author": "Coco",
+  "manifest_version": 2,
+  "description": "Format your text anytime in the web editor.",
+  "permissions": [
+    "contextMenus",
+    "http://*/",
+    "http://*/*",
+    "https://*/",
+    "https://*/*"
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon-16.png",
+    "default_popup": "dist/html/popup.html"
+  },
+  "background": {
+    "scripts": ["dist/js/background.min.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/", "https://*/", "http://*/*", "https://*/*"],
+      "js": ["src/pangu.js", "dist/js/content.min.js"]
+    }
+  ]
+}
