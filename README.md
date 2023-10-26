@@ -1,4 +1,4 @@
-# ![](./icon-16.png) Chrome-extension-text-formatting
+# ![](./icon-128.png) Chrome-extension-text-formatting
 
 Format your text anytime in the web editor.
 
