@@ -4,8 +4,8 @@
 
 已经支持的平台：
 
-+ <img width="36" alt="logo" src="https://ssl.gstatic.com/docs/spreadsheets/spreadsheets2.ico"> [谷歌文档 - Excel](https://docs.google.com/spreadsheets)
-+ <img width="36" alt="logo" src="https://as.smgv.cn/from_qbox/favicon.ico"> [石墨文档](https://shimo.im/)
++ [谷歌文档 - Excel](https://docs.google.com/spreadsheets)
++ [石墨文档](https://shimo.im/)
 
 ## How to install
 
