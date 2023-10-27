@@ -20,6 +20,12 @@
 
 ![](./images//demo.gif)
 
+## Update Logs
+
+1. 【2023-10-27】，新增对谷歌文档 Excel 的支持
+
+![](./images//demo-excel.gif)
+
 ## Next
 
 写给自己用的扩展，计划逐步兼容语雀文档、有道云、飞书文档、掘金编辑器、Github issues 输入框，感兴趣可提前 Star。
