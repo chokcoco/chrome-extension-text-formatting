@@ -20,7 +20,7 @@ chrome.runtime.onMessage.addListener(function (request) {
 
     if (replacedText && request.isEditable) {
       switch (true) {
-        case business === "GoogleExcel":
+        case business === "GoogleExcel" || business === "Shimo":
           googleExcelreplaceSelectedText(replacedText);
           return;
         default:
