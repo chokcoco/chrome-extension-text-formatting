@@ -1,4 +1,11 @@
-console.info("Text formatting init.");
+import { businessJudgment } from "./common/util";
+
+console.info("【格式化插件】Text formatting init.");
+
+const business = businessJudgment();
+const selection = window.getSelection();
+
+console.info("【格式化插件】当前插件宿主：", business);
 
 // eslint-disable-next-line no-undef
 chrome.runtime.onMessage.addListener(function (request) {
@@ -8,10 +15,18 @@ chrome.runtime.onMessage.addListener(function (request) {
   if (request.code === 1) {
     // eslint-disable-next-line no-undef
     var replacedText = pangu.spacing(request.message); // 要替换的文本
-    console.log("替换前文本：", request.message);
-    console.log("替换后文本：", replacedText);
+    console.log("【格式化插件】替换前文本：", request.message);
+    console.log("【格式化插件】替换后文本：", replacedText);
 
     if (replacedText && request.isEditable) {
+      switch (true) {
+        case business === "GoogleExcel" || business === "Shimo":
+          googleExcelreplaceSelectedText(replacedText);
+          return;
+        default:
+          break;
+      }
+      console.log("【格式化插件】通用框逻辑");
       replaceSelectedText(replacedText);
     }
   }
@@ -46,6 +61,7 @@ function replaceSelectedText(replacement) {
       inputElement.value.substring(0, start) +
       replacement +
       inputElement.value.substring(end);
+
     inputElement.value = newValue;
 
     // 重新设置光标位置
@@ -54,4 +70,17 @@ function replaceSelectedText(replacement) {
   }
 }
 
-console.info("Text formatting end.");
+function googleExcelreplaceSelectedText(newText) {
+  if (window.getSelection && selection.rangeCount > 0) {
+    const range = selection.getRangeAt(0);
+    const newTextNode = document.createTextNode(newText);
+    range.deleteContents();
+    range.insertNode(newTextNode);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  } else if (document.selection && document.selection.type != "Control") {
+    document.selection.createRange().text = newText;
+  }
+}
+
+// console.info("Text formatting end.");

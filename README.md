@@ -2,6 +2,11 @@
 
 通过谷歌扩展，快速将选中文本，格式化为符合 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 的文本。
 
+已经支持的平台：
+
++ [谷歌文档 - Excel](https://docs.google.com/spreadsheets)
++ [石墨文档](https://shimo.im/)
+
 ## How to install
 
 1. 打开 Chrome 扩展页面 `chrome://extensions/`
@@ -15,10 +20,16 @@
 
 1. 选择你需要格式化的文本内容
 2. 右键呼出菜单，选择 `Text formatting` 按钮
-    - 如果当前选择内容处于 `input` 或者 `textarea` 输入框内，会完成自动文本替换
+    - 如果当前选择内容处于可编辑输入框内，会完成自动文本替换
     - 如果当前选择内容处于不可编辑状态，可打开控制台查看格式化后的内容
 
 ![](./images//demo.gif)
+
+## Update Logs
+
+1. 【2023-10-27】，新增对谷歌文档 Excel 的支持
+
+![](./images//demo-google-excel.gif)
 
 ## Next
 
