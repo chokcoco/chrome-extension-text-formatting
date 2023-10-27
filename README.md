@@ -24,7 +24,7 @@
 
 1. 【2023-10-27】，新增对谷歌文档 Excel 的支持
 
-![](./images//demo-excel.gif)
+![](./images//demo-google-excel.gif)
 
 ## Next
 
