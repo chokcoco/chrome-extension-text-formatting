@@ -23,6 +23,9 @@ chrome.runtime.onMessage.addListener(function (request) {
         case business === "GoogleExcel" || business === "Shimo":
           googleExcelreplaceSelectedText(replacedText);
           return;
+        case business === "Yuque":
+          // TODO: 删除整个节点，再添加
+          return;
         default:
           break;
       }
